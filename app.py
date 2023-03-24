@@ -1,6 +1,5 @@
-#import the dependencies
+#import all dependencies
 import numpy as np
-
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
@@ -104,9 +103,8 @@ def temp():
     return jsonify(temperature)
 
 
- # Return a JSON list of the minimum temperature, the average temperature, and the maximum temperature for a specified start or start-end range.
- # This function called `calc_temps` will accept start date and end date in the format '%Y-%m-%d' 
- # and return the minimum, average, and maximum temperatures for that range of dates  
+ # Return a JSON list of the minimum temperature,
+ # the average temperature, and the maximum temperature for a specified start or start-end range.
 
 @app.route("/api/v1.0/<start>")
 def calc_temps_sd(start):
@@ -134,7 +132,7 @@ def calc_temps_sd(start):
 
 @app.route("/api/v1.0/<start>/<end>")
 def calc_temps(start, end):
-    # Create our session (link) from Python to the DB
+
     session = Session(engine)
     """TMIN, TAVG, and TMAX for a list of dates.
     
