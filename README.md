@@ -29,3 +29,5 @@ Use Python and SQLAlchemy to do a basic climate analysis and data exploration of
 
 
 ## Part 2: Design A Climate App
+
+NOTE: Created with help from UTOR Data Analytics Peer mentorship
